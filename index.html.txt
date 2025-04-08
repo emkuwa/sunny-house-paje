@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny House Paje - Your Beachside Home in Zanzibar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .tropical-gradient {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+        }
+        .room-card {
+            transition: all 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #0083b0;
+        }
+        .amenity-icon {
+            transition: all 0.3s ease;
+        }
+        .amenity-icon:hover {
+            transform: scale(1.1);
+            color: #0083b0;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #0083b0;
+            box-shadow: 0 0 0 3px rgba(0, 131, 176, 0.2);
+        }
+        .btn-primary {
+            background-color: #0083b0;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #00b4db;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-10 bg-white bg-opacity-90 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-teal-600">Sunny House Paje</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-teal-600 transition duration-300">About</a>
+                <a href="#rooms" class="text-gray-600 hover:text-teal-600 transition duration-300">Rooms</a>
+                <a href="#amenities" class="text-gray-600 hover:text-teal-600 transition duration-300">Amenities</a>
+                <a href="#location" class="text-gray-600 hover:text-teal-600 transition duration-300">Location</a>
+                <a href="#activities" class="text-gray-600 hover:text-teal-600 transition duration-300">Activities</a>
+                <a href="#contact" class="text-gray-600 hover:text-teal-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Welcome to Sunny House Paje</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">Your cozy home away from home in paradise</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                <p class="bg-white bg-opacity-90 text-teal-600 font-semibold px-6 py-3 rounded-full">
+                    <i class="fas fa-walking mr-2"></i> 30 Seconds to Beach
+                </p>
+                <p class="bg-white bg-opacity-90 text-teal-600 font-semibold px-6 py-3 rounded-full">
+                    <i class="fas fa-wind mr-2"></i> Kitesurfing Paradise
+                </p>
+                <p class="bg-white bg-opacity-90 text-teal-600 font-semibold px-6 py-3 rounded-full">
+                    <i class="fas fa-home mr-2"></i> Authentic Local Experience
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Sunny House Paje" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h2 class="text-3xl font-bold mb-6 section-title">About Our Home</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Welcome to our cozy home in the heart of Paje village, Zanzibar! Sunny House Paje is a small local guesthouse that offers a warm and inviting atmosphere perfect for travelers seeking a simple and authentic Zanzibari experience.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our house is owned and managed by Sarah and Axel, who are passionate about making your stay comfortable and memorable. With their extensive knowledge of the area, they're always ready to provide recommendations and assist with organizing activities.
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-teal-600">Why Choose Sunny House Paje?</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Less than a minute walk to the stunning Paje Beach</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Affordable accommodation options for various budgets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Friendly, knowledgeable hosts who ensure a pleasant stay</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Close to kitesurfing spots and water activities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Access to shared kitchen and garden relaxation areas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">Our Accommodations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80" alt="Twin Room" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Twin Room with Shared Bathroom</h3>
+                        <p class="text-gray-600 mb-4">Comfortable room with two single beds, perfect for friends traveling together.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">2 Guests</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bed text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">2 Twin Beds</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bath text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">Shared Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Double Room" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Double Room with Shared Bathroom</h3>
+                        <p class="text-gray-600 mb-4">Cozy room with a comfortable full-size bed for couples or solo travelers.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">2 Guests</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bed text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">1 Full Bed</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bath text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">Shared Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Double Room Private" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Double Room with Private Bathroom</h3>
+                        <p class="text-gray-600 mb-4">Spacious room with a king-size bed and private bathroom for added comfort.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">2 Guests</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bed text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">1 King Bed</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bath text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">Private Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room 4 -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Standard Double" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Standard Double Room</h3>
+                        <p class="text-gray-600 mb-4">Our most popular room with a queen-size bed and modern furnishings.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">2 Guests</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bed text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">1 Queen Bed</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bath text-teal-500 mr-2"></i>
+                            <span class="text-gray-700">Private Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">What Our Guests Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The location was perfect for my needs! Right by the beach and tons of restaurants and places to chill. The room was wonderful, and the bathroom was always clean. The kitchen was well-stocked and the hosts were incredibly helpful!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-teal-200 flex items-center justify-center">
+                            <span class="text-teal-700 font-bold">M</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Melton</h4>
+                            <p class="text-gray-500 text-sm">United States</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The owners are so lovely, kind and helpful. They make their accommodation very welcoming for everyone and decorate it very nicely. Location is perfect, with less than a minute walk to the beach and close to shops, restaurants."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-teal-200 flex items-center justify-center">
+                            <span class="text-teal-700 font-bold">C</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Cerniauskaite</h4>
+                            <p class="text-gray-500 text-sm">United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"We spent 16 nights at Sunny house. The vacation was a success due to our wonderful hosts-Sarah and Axel. It was sad to leave this place but we know we will definitely come back. We highly recommend it especially to kiteboarders!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-teal-200 flex items-center justify-center">
+                            <span class="text-teal-700 font-bold">G</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Gedjuns</h4>
+                            <p class="text-gray-500 text-sm">Latvia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">Our Amenities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Amenity 1 -->
+                <div class="text-center">
+                    <i class="fas fa-wifi text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Free WiFi</h3>
+                    <p class="text-gray-600">Stay connected with good quality WiFi throughout the property</p>
+                </div>
+                
+                <!-- Amenity 2 -->
+                <div class="text-center">
+                    <i class="fas fa-utensils text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Shared Kitchen</h3>
+                    <p class="text-gray-600">Well-equipped kitchen facilities to prepare your own meals</p>
+                </div>
+                
+                <!-- Amenity 3 -->
+                <div class="text-center">
+                    <i class="fas fa-parking text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Free Parking</h3>
+                    <p class="text-gray-600">Complimentary on-site parking for your convenience</p>
+                </div>
+                
+                <!-- Amenity 4 -->
+                <div class="text-center">
+                    <i class="fas fa-spa text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Garden</h3>
+                    <p class="text-gray-600">Relax in our peaceful garden with outdoor seating areas</p>
+                </div>
+                
+                <!-- Amenity 5 -->
+                <div class="text-center">
+                    <i class="fas fa-bicycle text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Bicycle Rental</h3>
+                    <p class="text-gray-600">Explore the area on two wheels with our rental service</p>
+                </div>
+                
+                <!-- Amenity 6 -->
+                <div class="text-center">
+                    <i class="fas fa-plane-departure text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Airport Shuttle</h3>
+                    <p class="text-gray-600">Convenient airport transfers available (additional charge)</p>
+                </div>
+                
+                <!-- Amenity 7 -->
+                <div class="text-center">
+                    <i class="fas fa-hands-wash text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Laundry Service</h3>
+                    <p class="text-gray-600">Keep your clothes fresh during your stay</p>
+                </div>
+                
+                <!-- Amenity 8 -->
+                <div class="text-center">
+                    <i class="fas fa-hand-sparkles text-5xl text-teal-500 mb-4 amenity-icon"></i>
+                    <h3 class="text-xl font-semibold mb-2">Massage Service</h3>
+                    <p class="text-gray-600">Relax with a massage after a day of activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">Our Location</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-teal-600">Perfect Location in Paje</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Sunny House Paje is ideally located in the heart of Paje village on the southeast coast of Zanzibar, just steps away from the stunning Paje Beach. Our location offers the perfect balance of accessibility and tranquility.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-teal-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Address</h4>
+                                    <p class="text-gray-600">Paje Beach, Second in line, Paje 72110, Tanzania</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-walking text-teal-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Distance to Beach</h4>
+                                    <p class="text-gray-600">Less than 1 minute walk (approx. 30 seconds)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-plane text-teal-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Airport</h4>
+                                    <p class="text-gray-600">55 km from Kisauni Airport (approx. 1 hour drive)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-store text-teal-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Nearby</h4>
+                                    <p class="text-gray-600">Restaurants, shops, kitesurfing schools, and local markets within walking distance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-lg h-full">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9196694751574!2d39.54204487582282!3d-6.272896861532185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185113c759d83ac1%3A0x44bf14e2b0274538!2sSunny%20House%20Paje!5e0!3m2!1sen!2sus!4v1712598055562!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">Activities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1524594081293-190a2fe0baae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Kitesurfing" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Kitesurfing</h3>
+                        <p class="text-gray-600 mb-4">
+                            Paje is renowned as a world-class kitesurfing destination. With consistent winds, shallow waters, and several professional schools nearby, it's perfect for beginners and experienced kitesurfers alike.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Multiple kitesurfing schools within walking distance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Beach Relaxation" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Beach Relaxation</h3>
+                        <p class="text-gray-600 mb-4">
+                            Enjoy the pristine white sand beaches and crystal-clear turquoise waters just steps from our property. Perfect for sunbathing, swimming, and watching stunning sunrises.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Beach bars and restaurants with ocean views nearby</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Snorkeling" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Snorkeling & Diving</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover the vibrant marine life in Zanzibar's coral reefs. Snorkeling trips and diving excursions can be arranged to explore the underwater wonders.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Our hosts can help arrange tours with reliable operators</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1603123853880-a92465c7a272?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Local Village" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cultural Experiences</h3>
+                        <p class="text-gray-600 mb-4">
+                            Immerse yourself in local Zanzibari culture by visiting nearby villages, markets, and historical sites. Experience the friendly hospitality of the local people.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Local markets and community interactions available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1590668156541-e9586a083621?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80" alt="Stone Town" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Stone Town Excursion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Visit the UNESCO World Heritage site of Stone Town with its narrow alleys, historical buildings, and vibrant markets. A day trip from Paje brings you to this cultural treasure.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Transportation can be arranged through our hosts</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1068&q=80" alt="Jozani Forest" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Jozani Forest</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explore the Jozani Forest, home to the rare Red Colobus Monkeys. This natural reserve is just 12 miles from Sunny House Paje and offers a glimpse into Zanzibar's diverse ecosystem.
+                        </p>
+                        <div class="flex items-center text-teal-600">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Half-day tours available with expert guides</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-teal-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title mx-auto">Contact Us</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-teal-600">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-teal-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abd8dec5c5d2c3c4ded8cedbcac1ceebccc6cac2c785c8c4c6">[email&#160;protected]</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-teal-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+255 777 912 002</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-teal-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Address</h4>
+                                    <p class="text-gray-600">Paje Beach, Second in line, Paje 72110, Tanzania</p>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="font-semibold mb-2">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.facebook.com/SunnyHousePaje/" class="text-teal-500 hover:text-teal-600 transition duration-300">
+                                        <i class="fab fa-facebook-f text-2xl"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/sunnyhousepajebeach/" class="text-teal-500 hover:text-teal-600 transition duration-300">
+                                        <i class="fab fa-instagram text-2xl"></i>
+                                    </a>
+                                    <a href="#" class="text-teal-500 hover:text-teal-600 transition duration-300">
+                                        <i class="fab fa-tripadvisor text-2xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-teal-600">Send Us a Message</h3>
+                        <form class="contact-form space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Your email">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Subject">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:shadow-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Call to Action -->
+    <section class="py-16 tropical-gradient">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-white">Ready to Experience Sunny House Paje?</h2>
+            <p class="text-white text-xl mb-8 max-w-3xl mx-auto">Book your stay today and enjoy our authentic Zanzibari hospitality, just steps away from the beautiful Paje Beach.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="https://www.booking.com/hotel/tz/sunny-house.html" target="_blank" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-calendar-check mr-2"></i> Book on Booking.com
+                </a>
+                <a href="https://www.airbnb.com/rooms/15892271" target="_blank" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 flex items-center justify-center">
+                    <i class="fab fa-airbnb mr-2"></i> Book on Airbnb
+                </a>
+                <a href="/cdn-cgi/l/email-protection#f281879c9c8b9a9d87819782939897b2959f939b9edc919d9f" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i> Email Us Directly
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Sunny House Paje</h3>
+                    <p class="text-gray-400 max-w-md">Your cozy home in Paje, Zanzibar, offering affordable accommodations just steps from the beach and kitesurfing paradise.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="#rooms" class="text-gray-400 hover:text-white transition duration-300">Rooms</a></li>
+                            <li><a href="#amenities" class="text-gray-400 hover:text-white transition duration-300">Amenities</a></li>
+                            <li><a href="#location" class="text-gray-400 hover:text-white transition duration-300">Location</a></li>
+                            <li><a href="#activities" class="text-gray-400 hover:text-white transition duration-300">Activities</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Explore Zanzibar</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Paje Beach</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Kitesurfing</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Stone Town</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Jozani Forest</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Local Culture</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-teal-500 mt-1 mr-2"></i>
+                                <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec9f998282958483999f899c8d8689ac8b818d8580c28f8381">[email&#160;protected]</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone text-teal-500 mt-1 mr-2"></i>
+                                <span class="text-gray-400">+255 777 912 002</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-teal-500 mt-1 mr-2"></i>
+                                <span class="text-gray-400">Paje Beach, Zanzibar, Tanzania</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Sunny House Paje. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
